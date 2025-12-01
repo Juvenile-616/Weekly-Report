@@ -22,7 +22,7 @@
 5. 讨论发现， identity mapping 引入的一个x，不会影响SGD算法的梯度下降，并且没有额外引入更多的 parameters/computational complexity ，如果出现了维度变化可以：直接padding 0，做线性映射（事实上后面讨论出来是没有必要的）
 6. 这样的模型在 ImageNet 跑完后发现，吃到了 depth 带来的优势，更深的模型成功学到了更多的特征，让其带来了明显的 accuracy-depth 收益
 7. 然后接下来就在 CIFAR-10 dataset 上训练进行训练，已知 CIFAR-10 dataset[用于验证深度对训练的影响和退化问题的解决], 证明了其不只是对一个特定的数据集才能有效，证明其普适性[generic]
-8. 后为严谨讨论，也讨论了 $ \mathbf{y} = F \left(\mathbf{x}, \left\{W_{i}\right\}\right) + W_{s}\mathbf{x} $ 这种情况。实验表明，由于本文主要是解决 degradation problem 而这个问题已然能通过 identity mapping 也就 $\mathbf{x}$ 解决，就没有必要再使用 $W_{s}$ 来徒增成本了。
+8. 后为严谨讨论，也讨论了 $\mathbf{y} = F \left(\mathbf{x}, \left\{W_{i}\right\}\right) + W_{s}\mathbf{x}$ 这种情况。实验表明，由于本文主要是解决 degradation problem 而这个问题已然能通过 identity mapping 也就 $\mathbf{x}$ 解决，就没有必要再使用 $W_{s}$ 来徒增成本了。
 9. 为严谨控制实验变量， Network Architectures 中严格定义了 
 
     **Plain Network** [参考了 the philosopy of VGG Nets]
@@ -79,4 +79,5 @@ ILSVRC & COCO 2015 competitions [ImageNet detection, ImageNet localization, COCO
 - [ ] 再吃一下剩下ResNet paper阅读 [ResNet]'https://arxiv.org/abs/1512.03385'
 
 *在补一些因为期中考试而拖延了的 ddl（TAT），进度有点缓慢Orz*
+
 
